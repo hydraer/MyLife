@@ -21,9 +21,11 @@ public class FirstActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("www.baidu.com"));
-                startActivity(intent);
+//                String data = "I need you";
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+//                intent.putExtra("data", data);
+//                startActivity(intent);
+                startActivityForResult(intent, 1);
             }
         });
     }
